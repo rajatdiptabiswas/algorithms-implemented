@@ -7,7 +7,7 @@ class MedianOfTwoSortedArrays {
 
         /**
          * Swap the arrays in case a[] is larger than b[].
-         * Ensures performance is always log2(min(a.length, b.lenght)).
+         * Ensures performance is always log2(min(a.length, b.length)).
          */
         if (lengthA > lengthB) {
             return medianOfTwoSortedArrays(b, a);
@@ -23,7 +23,7 @@ class MedianOfTwoSortedArrays {
              * 
              * The number of elements to the left side of the partitions in both a[]
              * and b[] should equal the number of elements to the right side of the
-             * paritions in both a[] and b[].
+             * partitions in both a[] and b[].
              * 
              * If there are odd number of elements, then the left sides have one
              * extra element compared to number of elements on the right sides.
@@ -66,13 +66,13 @@ class MedianOfTwoSortedArrays {
                 }
             } else if (leftAMax > rightBMin) {
                 /**
-                 * This means we too far right in a[].
+                 * This means the partition is too far right in a[].
                  * Need to move partitionA left in a[].
                  */
                 hi = partitionA - 1;
             } else if (leftBMax > rightAMin) {
                 /**
-                 * This means we too far left in a[].
+                 * This means the partition is too far left in a[].
                  * Need to move partitionA right in a[].
                  */
                 lo = partitionA + 1;
